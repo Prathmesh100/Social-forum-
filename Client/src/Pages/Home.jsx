@@ -1,6 +1,8 @@
 const Home = () => {
   return (
-    <div>Home</div>
+    <section className='min-h-screen flex items-center flex-col'>
+      Home
+    </section>
   )
 }
 
