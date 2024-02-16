@@ -4,7 +4,7 @@ import Sidebar from './Sidebar'
 const Navbar = () => {
 
   return (
-   <nav className='sticky top-0 z-30 w-full border-2'>
+   <nav className='sticky top-0 z-30 w-full'>
     <LongNav/>
     <Sidebar/>
    </nav>
