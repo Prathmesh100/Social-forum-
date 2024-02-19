@@ -18,9 +18,9 @@ const LongNav = () => {
                     const { id, text, url } = navlink
 
                     return (
-                        <li key={id} className={id === active ? 'text-purple-900 font-[600] p-1 lg:text-[16px] transition text-[20px] mx-1 mt-2 hover:text-gray-800 border-b-[3px] border-b-purple-900' : 'text-purple-900 font-[600] p-1 lg:text-[16px] transition text-[20px] mx-1 mt-2 hover:text-gray-800 hover:border-b-[3px] hover:border-b-purple-900'} onClick={() => setActive(id)}>
-                            <NavLink to={url} > {text} </NavLink>
-                        </li>
+                        <NavLink to={url} key={id} className={id === active ? 'text-purple-900 font-[600] p-1 lg:text-[16px] transition text-[20px] mx-1 mt-2 hover:text-gray-800 border-b-[3px] border-b-purple-900' : 'text-purple-900 font-[600] p-1 lg:text-[16px] transition text-[20px] mx-1 mt-2 hover:text-gray-800 hover:border-b-[3px] hover:border-b-purple-900'} onClick={() => setActive(id)}>
+                            {text}
+                        </NavLink>
                     )
                 })}
             </ul>

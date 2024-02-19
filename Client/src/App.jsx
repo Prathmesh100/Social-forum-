@@ -9,6 +9,8 @@ import Error from './Pages/Error'
 import Layout from "./Layout"
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
+import ForgetPassword from "./Pages/ForgetPassword"
+import UpdatePassword from "./Pages/UpdatePassword"
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
       </Route>
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
+      <Route path='/forget-password' element={<ForgetPassword />} />
+      <Route path='/login/update-password/:id' element={<UpdatePassword />} />
     </Routes>
   )
 }
