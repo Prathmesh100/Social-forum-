@@ -21,15 +21,19 @@ const Login = () => {
         password,
       });
 
-      const user = response?.data?.user;
+      console.log(response);
 
+      const user = response?.data?.user;
+      console.log(user)
       // Save the token in localStorage or a secure cookie
-      localStorage.setItem('user', user);
-      toast.success('Login successfull')
-      navigate('/')
+      localStorage.setItem("user",JSON.stringify(user));
+      if (user.approved) {
+        toast.success('Login successfull')
+        navigate('/')
+      }
     } catch (error) {
       console.error('Login failed', error);
-      toast.error('Login failed')
+      toast.error('User not approved')
     }
   };
 

@@ -10,7 +10,7 @@ const LongNav = () => {
 
     return (
         <div className='w-full p-4 lg:flex justify-evenly items-center bg-purple-100/90 gap-4 h-[70px] hidden'>
-            <Link to='/' className='text-center lg:text-[30px] text-[25px] font-[800] p-1 text-purple-700 font-display' >
+            <Link to='/' className='text-center lg:text-[30px] text-[25px] font-[800] p-1 text-purple-700 font-display' onClick={()=> setActive(1)} >
                 Social Forum
             </Link>
             <ul className='min-w-[680px] lg:flex justify-between capitalize p-2'>

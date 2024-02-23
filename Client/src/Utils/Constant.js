@@ -23,15 +23,19 @@ export const NavLinks = [
     },
     {
         id: 5,
+        text: 'Quiz',
+        url: '/quiz'
+    },
+    {
+        id: 6,
         text: 'FAQ',
         url: '/faq'
     },
     {
-        id: 6,
+        id: 7,
         text: 'Contact Us',
         url: '/contact'
-    },
-
+    }
 ]
 
 export const SocialLinks = [
@@ -89,4 +93,39 @@ export const Questions = [
         answer: 'We strive to regularly update our content to provide fresh and relevant materials. Check back frequently or follow our social media profiles for announcements about new additions and updates.',
         isOpen: false
     }
+]
+
+
+export const Filters = ['Teacher Resources', 'Student Resources', 'E - Resources', 'Sample Papers', 'Career Guidance', 'Publications']
+
+export const QuizCategories = [
+    {
+        id: 1,
+        category: 'Class-6'
+
+    },
+    {
+        id: 2,
+        category: 'Class-7'
+    },
+    {
+        id: 3,
+        category: 'Class-8'
+    },
+    {
+        id: 4,
+        category: 'Class-9'
+    },
+    {
+        id: 5,
+        category: 'Class-10'
+    },
+    {
+        id: 6,
+        category: 'Class-11'
+    },
+    {
+        id: 7,
+        category: 'Class-12'
+    },
 ]

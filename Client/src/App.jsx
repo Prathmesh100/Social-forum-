@@ -5,12 +5,16 @@ import Blogs from './Pages/Blogs'
 import Contact from './Pages/Contact'
 import Faq from './Pages/Faq'
 import Resources from './Pages/Resources'
+import Quiz from './Pages/Quiz'
 import Error from './Pages/Error'
 import Layout from "./Layout"
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
 import ForgetPassword from "./Pages/ForgetPassword"
 import UpdatePassword from "./Pages/UpdatePassword"
+import Blog from "./Pages/Blog"
+import PrivateRoute from "./Components/Auth/PrivateRoute"
+import Dashboard from "./Pages/Dashboard"
 
 function App() {
 
@@ -20,15 +24,22 @@ function App() {
         <Route index element={<Home />} />
         <Route path='aboutus' element={<About />} />
         <Route path='blogs' element={<Blogs />} />
+        <Route path='blogs/:id' element={<Blog />} />
         <Route path='contact' element={<Contact />} />
         <Route path='faq' element={<Faq />} />
         <Route path='resources' element={<Resources />} />
+        <Route path='quiz' element={<Quiz />} />
         <Route path="*" element={<Error />} />
       </Route>
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/forget-password' element={<ForgetPassword />} />
       <Route path='/login/update-password/:id' element={<UpdatePassword />} />
+      <Route element={<PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>} >
+        <Route path="/dashboard/about" element={<Home/>}></Route>
+      </Route>
     </Routes>
   )
 }

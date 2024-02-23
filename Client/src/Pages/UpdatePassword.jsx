@@ -23,9 +23,7 @@ const UpdatePassword = () => {
                 confirmPassword,
                 token,
             });
-
-
-            // Save the token in localStorage or a secure cookie
+            
             toast.success('Password updated')
             navigate('/login')
         } catch (error) {
